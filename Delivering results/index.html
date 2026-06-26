@@ -6,40 +6,89 @@
 <title>Delivering Results - HBR</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#e8d5a3;font-family:Georgia,serif;color:#2c2c2c;line-height:1.8;font-size:17px}
-header{text-align:center;padding:3rem 1rem 2rem;border-bottom:2px solid #b8a070}
-header h1{font-size:2rem;margin-bottom:.5rem;color:#3a3a3a}
-header p{font-size:1rem;color:#555;font-style:italic}
-main{max-width:720px;margin:0 auto;padding:2rem 1.5rem}
-.page{margin-bottom:1rem;padding-bottom:1rem}
-.page-num{text-align:right;font-size:.8rem;color:#888;margin-bottom:.5rem}
-h2{font-size:1.6rem;margin:2.5rem 0 1rem;text-align:center;border-bottom:1px solid #b8a070;padding-bottom:.5rem}
-h3{font-size:1.2rem;margin:2rem 0 .8rem;font-variant:small-caps;letter-spacing:1px}
-h4{font-size:1.1rem;margin:1.5rem 0 .8rem}
-p{margin-bottom:1rem;text-align:justify}
-blockquote{margin:1.5rem 2rem;font-style:italic}
+body{background:#1e1e2e;font-family:'JetBrains Mono','Fira Code','Cascadia Code',Consolas,monospace;color:#cdd6f4;line-height:1.85;font-size:16px}
+header{text-align:center;padding:3.5rem 1rem 2.5rem;border-bottom:2px solid #45475a;background:linear-gradient(135deg,#1e1e2e 0%,#181825 100%)}
+header h1{font-size:2.2rem;margin-bottom:.5rem;color:#cba6f7;text-shadow:0 0 20px rgba(203,166,247,0.3)}
+header p{font-size:1rem;color:#a6adc8;font-style:italic}
+main{max-width:780px;margin:0 auto;padding:2.5rem 2rem}
+.page{margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid #313244}
+.page-num{text-align:right;font-size:.75rem;color:#585b70;margin-bottom:.5rem;font-family:monospace}
+.page-num::before{content:'// pg ';color:#585b70}
+.author-name{text-align:center;font-style:italic;margin-bottom:1rem;color:#a6e3a1;font-size:.95rem}
+.author-name::before{content:'@author ';color:#585b70;font-style:normal}
+
+/* Headings - like function/class declarations */
+h2{font-size:1.6rem;margin:3rem 0 1.2rem;text-align:center;border-bottom:2px solid #45475a;padding-bottom:.8rem;color:#89b4fa;font-weight:700}
+h2::before{content:'## ';color:#f38ba8;font-weight:normal;opacity:0.7}
+h3{font-size:1.25rem;margin:2.5rem 0 1rem;color:#a6e3a1;letter-spacing:.5px;font-weight:600}
+h3::before{content:'### ';color:#585b70;font-weight:normal}
+h4{font-size:1.1rem;margin:1.8rem 0 .8rem;color:#f9e2af}
+h4::before{content:'> ';color:#585b70}
+
+/* Body text - like comments in warm tones */
+p{margin-bottom:1.1rem;text-align:justify;color:#bac2de}
+blockquote{margin:1.5rem 1.5rem;padding:1rem 1.5rem;border-left:3px solid #f38ba8;background:#181825;border-radius:0 8px 8px 0}
+blockquote p{color:#f5c2e7;font-style:italic}
+
+/* Lists - like bullet points in teal */
 ul,ol{margin:1rem 0 1rem 2rem}
-li{margin-bottom:.5rem}
-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.95rem}
-table caption{font-style:italic;margin-bottom:.5rem;font-weight:bold}
-th,td{border:1px solid #999;padding:.6rem .8rem;text-align:left;vertical-align:top}
-th{background:#d4be82;font-weight:bold}
-.exhibit{margin:2rem 0;padding:1.5rem;border:1px solid #b8a070;background:#f0e4c4}
-.exhibit-title{font-style:italic;font-weight:bold;margin-bottom:1rem;text-align:center}
-sup{font-size:.75rem}
-footer{text-align:center;padding:2rem;color:#777;font-size:.85rem;border-top:1px solid #b8a070;margin-top:3rem}
-.chapter-section{margin-top:4rem;padding-top:2rem;border-top:3px solid #b8a070}
+li{margin-bottom:.6rem;color:#94e2d5}
+li strong{color:#fab387}
+
+/* Tables - like data structures */
+table{width:100%;border-collapse:collapse;margin:1.8rem 0;font-size:.9rem;border:1px solid #45475a;border-radius:8px;overflow:hidden}
+table caption{font-style:italic;margin-bottom:.5rem;font-weight:bold;color:#cba6f7}
+th,td{border:1px solid #45475a;padding:.7rem .9rem;text-align:left;vertical-align:top}
+th{background:#313244;font-weight:bold;color:#89dceb}
+td{color:#bac2de}
+td strong{color:#fab387}
+tr:nth-child(even){background:#181825}
+
+/* Exhibits - like code blocks */
+.exhibit{margin:2.5rem 0;padding:1.8rem;border:1px solid #45475a;background:#181825;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,0.3)}
+.exhibit-title{font-style:normal;font-weight:bold;margin-bottom:1.2rem;text-align:center;color:#f9e2af;font-size:1.05rem}
+.exhibit-title::before{content:'📊 '}
+
+/* Emphasis & inline elements */
+em{color:#f5c2e7;font-style:italic}
+strong{color:#fab387}
+sup{font-size:.7rem;color:#89dceb}
+
+/* Footer */
+footer{text-align:center;padding:2.5rem;color:#585b70;font-size:.85rem;border-top:2px solid #45475a;margin-top:4rem}
+footer em{color:#a6adc8}
+
+/* Chapter sections - like module separators */
+.chapter-section{margin-top:5rem;padding-top:3rem;border-top:3px solid #cba6f7;position:relative}
+.chapter-section::before{content:'━━━ new module ━━━';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#1e1e2e;padding:0 1rem;color:#cba6f7;font-size:.8rem;letter-spacing:2px}
+
+/* Scrollbar styling */
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:#181825}
+::-webkit-scrollbar-thumb{background:#45475a;border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:#585b70}
+
+/* Selection color */
+::selection{background:#cba6f7;color:#1e1e2e}
+
+/* Link styling */
+a{color:#89b4fa;text-decoration:none;border-bottom:1px dotted #89b4fa}
+a:hover{color:#b4befe;border-bottom-color:#b4befe}
+
+/* Ordered list (notes) special styling */
+ol li{color:#a6adc8;font-size:.92rem;line-height:1.7}
+ol li em{color:#89dceb}
 </style>
 </head>
 <body>
 <header>
-<h1>Delivering Results</h1>
-<p>A New Mandate for Human Resource Professionals<br>Harvard Business Review &mdash; Edited by Dave Ulrich</p>
+<h1 style="color:#cba6f7">Delivering Results</h1>
+<p>A New Mandate for Human Resource Professionals<br><span style="color:#89b4fa">Harvard Business Review</span> &mdash; Edited by <span style="color:#a6e3a1">Dave Ulrich</span></p>
 </header>
 <main>
 
 <h2>Introduction</h2>
-<p class="page-num" style="text-align:center;font-style:italic;margin-bottom:1rem">Dave Ulrich</p>
+<p class="author-name">Dave Ulrich</p>
 
 <div class="page">
 <p class="page-num">1</p>
@@ -299,10 +348,7 @@ footer{text-align:center;padding:2rem;color:#777;font-size:.85rem;border-top:1px
 
 <div class="chapter-section">
 <h2>Chapter 1: A New Mandate for Human Resources</h2>
-<p class="page-num" style="text-align:center;font-style:italic;margin-bottom:1rem">Dave Ulrich</p>
-
-<div class="page">
-<p class="page-num">27</p>
+<p class="author-name">Dave Ulrich</p>
 <h3>Delivering Core Capabilities</h3>
 <p>HR played an important role in the culture at Sears, which underwent a transformation of its business beginning in 1994. In facilitating that change, HR first took on the task of getting the organization to define and clarify the meaning of culture. HR helped lead the top 100 managers through discussions and debates of the questions, &ldquo;What are the top three things we want to be known for by our customers?&rdquo; and &ldquo;What do we do that is world class in those things?&rdquo; Ultimately, those conversations led to a consensus that Sears would define its culture as &ldquo;the identity of the company in the minds of the best customers.&rdquo; In addition, HR at Sears took on the responsibility of making the business case for a transformation of the company&rsquo;s culture. It compiled data showing that even a small increase in employee commitment led to a measurable increase in customer commitment and store profitability. The data illustrate conclusively that Sears&rsquo;s transformation affected employees, customers, and investors.</p>
 <p>HR at Sears guided the company&rsquo;s culture change in numerous other ways. The specific details, however, are not nearly as important as the broader point: it must identify alternative approaches to creating culture change.</p>
@@ -349,7 +395,7 @@ footer{text-align:center;padding:2rem;color:#777;font-size:.85rem;border-top:1px
 
 <div class="chapter-section">
 <h2>Chapter 2: The Core Competence of the Corporation</h2>
-<p class="page-num" style="text-align:center;font-style:italic;margin-bottom:1rem">C.K. Prahalad and Gary Hamel</p>
+<p class="author-name">C.K. Prahalad and Gary Hamel</p>
 
 <div class="page">
 <p class="page-num">30</p>
